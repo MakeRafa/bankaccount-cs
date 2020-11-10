@@ -27,7 +27,8 @@ class BankAccount:
             print(f'Amount Withdrawn: ${amount}')
 
     def get_balance(self):
-        print("Thank you for using our service, your ending balance is $ {self.balance}")
+        print("Thank you for using our service")
+        # return self.balance
 
     def add_interest(self):
         interest = self.balance * 0.00083
@@ -44,13 +45,23 @@ my_account = BankAccount("Rafa Vazquez")
 friends_account = BankAccount("Tony lopes")
 my2_account = BankAccount("Rafael Vazquez Navarro")
 
+print(my_account.get_balance)
+
+# print(my_account.full_name)
+# print(my_account.account_number)
+
+
 my_account.deposit(10)
-my_account.withdraw(10)
-my_account.withdraw(10)
+# print(get_balance)
 
-friends_account.add_interest()
-friends_account.deposit(20)
-friends_account.get_balance
+# my_account.withdraw(10)
+# my_account.withdraw(10)
 
-print(my_account.balance)
+# friends_account.add_interest()
+# friends_account.deposit(20)
+# friends_account.account_number
+# print(friends_account.account_number)
+
+
+# print(my_account.balance)
 
