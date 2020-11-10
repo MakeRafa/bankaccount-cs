@@ -19,16 +19,38 @@ class BankAccount:
         if amount > self.balance:
             self.balance -= amount
             print("Insuffient Funds")
-            self.balance = self.balance - 10
-            print(f'Amount Withdrawn: $ ${amount}')
+            self.balance -= 10
+            print(f'Amount Withdrawn: ${amount}')
+
+        else:
+            self.balance -= amount
+            print(f'Amount Withdrawn: ${amount}')
 
     def get_balance(self):
         print("Thank you for using our service, your ending balance is $ {self.balance}")
 
+    def add_interest(self):
+        interest = self.balance * 0.00083
+        self.balance += interest
+
+    def print_reciept(self):
+        print(self.full_name)
+        print(f"Account No.: ${self.account_number}")
+        print(f"Routing No.: ${self.routing_number}")
+        print(f"Balance: ${self.balance}")
+
 
 my_account = BankAccount("Rafa Vazquez")
+friends_account = BankAccount("Tony lopes")
+my2_account = BankAccount("Rafael Vazquez Navarro")
 
-print(my_account.full_name)
-print(my_account.routing_number)
-print(my_account.account_number)
+my_account.deposit(10)
+my_account.withdraw(10)
+my_account.withdraw(10)
+
+friends_account.add_interest()
+friends_account.deposit(20)
+friends_account.get_balance
+
 print(my_account.balance)
+
