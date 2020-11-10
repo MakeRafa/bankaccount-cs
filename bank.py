@@ -11,13 +11,20 @@ class BankAccount:
 
 # deposit method
     def deposit(self, amount):
-        
         self.balance += amount
         print(f"Amount Deposited: ${amount}")
 
 
     def withdraw(self,amount):
-        self.balance -= amount
+        if amount > self.balance:
+            self.balance -= amount
+            print("Insuffient Funds")
+            self.balance = self.balance - 10
+            print(f'Amount Withdrawn: $ ${amount}')
+
+    def get_balance(self):
+        print("Thank you for using our service, your ending balance is $ {self.balance}")
+
 
 my_account = BankAccount("Rafa Vazquez")
 
